@@ -1,0 +1,3 @@
+SELECT IdNasabah, KodeCabang, NamaNasabah, DATE_FORMAT(TanggalLahir,'%Y%m%d') as TanggalLahir, 
+IF (DATE_FORMAT(TanggalLahir,'%Y%m%d'), 'True', 'false') as CekTanggal 
+FROM `data_nasabah` 

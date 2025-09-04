@@ -1,0 +1,7 @@
+SELECT IF( INSTR(a.nama, "Koordinator"), a.nama, '' ) as cabkor, 
+c.nama as cabang,
+IF (INSTR(b.nama, "Cabang"), b.nama, '') as unit_kerja
+FROM `data_cabang` a 
+INNER JOIN `data_cabang` b on a.id = b.induk
+INNER JOIN `data_cabang` c on a.id = c.induk
+ORDER BY a.id
